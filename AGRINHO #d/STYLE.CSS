@@ -1,0 +1,246 @@
+/* CSS do Agrinho */
+
+/* Variáveis CSS */
+:root {
+    --verde-primario: #4a7c59;
+    --verde-claro: #8bc34a;
+    --verde-escuro: #2c5530;
+    --branco: #ffffff;
+    --cinza-claro: #f5f5f5;
+    --texto-escuro: #333;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--texto-escuro);
+    font-size: 16px;
+}
+
+/* Header */
+#header {
+    background-color: var(--verde-primario);
+    color: var(--branco);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#header h1 {
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+nav {
+    float: right;
+    margin-right: 2rem;
+}
+
+.nav-link {
+    color: var(--branco);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--verde-claro);
+}
+
+/* Sections principais */
+main {
+    margin-top: 80px;
+}
+
+.hero {
+    background-color: var(--cinza-claro);
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--texto-escuro);
+    margin-bottom: 2rem;
+}
+
+/* Botões */
+.btn {
+    background-color: var(--verde-primario);
+    color: var(--branco);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--verde-escuro);
+}
+
+/* Seção de conteúdo */
+.content {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    text-align: center;
+    color: var(--verde-escuro);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--texto-escuro);
+    font-size: 0.9rem;
+}
+
+/* Seção de contato */
+.contact {
+    background-color: var(--cinza-claro);
+    padding: 4rem 2rem;
+}
+
+.contact h2 {
+    text-align: center;
+    color: var(--verde-escuro);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--verde-escuro);
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--verde-claro);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--verde-primario);
+}
+
+#contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #header h1 {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    nav {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+    
+    #header {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .content {
+        padding: 2rem 1rem;
+    }
+    
+    .nav-link {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
